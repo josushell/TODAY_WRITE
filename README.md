@@ -5,7 +5,8 @@
 ## 1. TODAY WRITE
 ### Android 일기장&기분 통계 앱
 안드로이드 버전으로 만든 일기장 앱. 내가 쓸려고 만들었지만 생각해보니 ios 유저라서 못쓰게 되었고 공기계에서만 쓰는 슬픈 사실 \
-날씨와 위치정보를 받아와서 자동으로 기록해주고 요일 별 기분과 비율을 통계 도표로 시각적으로 제시
+날씨와 위치정보를 받아와서 자동으로 기록해주고 요일 별 기분과 비율을 통계 도표로 시각적으로 제시\
+총 2주 정도 걸린 것 같은데 깃헙 commit이랑 push 가 귀찮아서 안했더니 처음이자 마지막 commit&push 가 되었다\
 * Android Studio API 30
 * Weather API xml parsing
 * GPS location
@@ -40,5 +41,5 @@ https://github.com/josushell/TODAY_WRITE/tree/master/app/release \
 
 ## 5. RETROSPECT
 내 노트북이 안드로이드 스튜디오 때문에 블루스크린 수집가가 되었는데 역시 노트북으로 AVD 돌리는 것은 쉽지가 않다 그리고 진짜 디버깅에만 며칠씩 쓴듯\
-마지막에는 비동기 AyncTask로 처리한 날씨 api parsing에서 자꾸 원인 모를 오류로 강제 종료되서 이걸 해결한다고 고생 좀 했다
+마지막에는 비동기 AyncTask로 처리한 날씨 api parsing에서 자꾸 원인 모를 오류로 강제 종료되서 이걸 해결한다고 고생 좀 했다\
 안드로이드 스튜디오는 겨울에 난로 없을 때 딱 쓰기 좋다... ios 버전으로도 만들어야지
