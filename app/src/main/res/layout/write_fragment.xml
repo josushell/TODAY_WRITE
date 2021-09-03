@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".write_fragment">
+
+    <RelativeLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#CCFFFFFF"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/weather_icon_1" />
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="left"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="serif-monospace"
+            android:text="yy/MM/DD"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/locationView"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:ellipsize="end"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="삼성동"
+            android:textSize="13sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ContentsLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/TopLayout"
+        android:layout_above="@+id/MoodLayout"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            app:cardBackgroundColor="#FFFFFFFF"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="serif-monospace"
+                    android:hint="@string/Title"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="false"
+                    android:textSize="32sp" />
+
+                <EditText
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:id="@+id/edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:inputType="textPersonName"
+                    android:hint="How was your day today?"
+                    android:fontFamily="serif-monospace"/>
+
+                <ImageView
+                    android:id="@+id/imageToSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/imagetoset" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MoodLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_above="@+id/BottomLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.github.channguyen.rsv.RangeSliderView
+                android:id="@+id/sliderVew"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                app:filledColor="#FF6600"
+                app:emptyColor="#a8aeb8"
+                app:rangeCount="5"
+                app:sliderRadiusPercent="0.5"
+                app:barHeightPercent="0.1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smile1_48" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smile2_48" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smile3_48" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smile4_48" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/smile5_48" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/BottomLayout"
+        android:layout_marginBottom="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:background="@drawable/select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:background="@drawable/select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제" />
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:background="@drawable/select_button"
+            android:text="닫기" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

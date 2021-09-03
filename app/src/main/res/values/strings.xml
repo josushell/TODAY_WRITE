@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TODAY WRITE</string>
+    <string name="graph1_title">기분 별 비율</string>
+    <string name="graph2_title">요일 별 기분</string>
+    <string name="graph3_title">기분 변화</string>
+    <string name="Title">TITLE</string>
+</resources>

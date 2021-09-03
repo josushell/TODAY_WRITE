@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardElevation="20dp"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="#FFFFFFFF"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="10sp"
+            android:id="@+id/mood_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:padding="5dp"
+            app:srcCompat="@drawable/smile5_48" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="271dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif-monospace"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="내용"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/weather_img"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/weather_1" />
+
+                <ImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:srcCompat="@drawable/picture_128"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/weather_img"/>
+
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="134dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_centerInParent="true"
+                    android:gravity="left"
+                    android:fontFamily="serif-monospace"
+
+                    android:text="강남구"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_marginRight="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="bold"
+                    android:text="02/10" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/user_img2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            app:srcCompat="@drawable/picture1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="제목"
+                android:gravity="center"
+                android:ellipsize="none"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="serif-monospace"
+                android:maxLines="1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/mood_img2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/smile5_48" />
+
+                <ImageView
+                    android:id="@+id/weather_img2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_toRightOf="@+id/mood_img2"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/weather_icon_1" />
+
+                <TextView
+                    android:id="@+id/location2"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/date2"
+                    android:textStyle="bold"
+                    android:fontFamily="serif-monospace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"                    android:padding="10dp"
+                    android:text="02/10" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
